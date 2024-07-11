@@ -1,0 +1,943 @@
+Content-Type: text/enriched
+Text-Width: 70
+
+<x-color><param>green3</param>andrewdo@ai2</x-color><x-color><param>blue2</param>:/var/lib/myfrdcsa/codebases/minor/strads-frdcsa/attempts/10$</x-color> <bold>swipl -s simulation2.pl -g halt</bold>
+<x-color><param>red3</param>Warning: /var/lib/myfrdcsa/codebases/minor/strads-frdcsa/attempts/10/simulation2.pl:292:
+	Singleton variables: [HostStr]
+Warning: /var/lib/myfrdcsa/codebases/minor/strads-frdcsa/attempts/10/simulation2.pl:302:
+	Singleton variables: [Person]
+Warning: /var/lib/myfrdcsa/codebases/minor/strads-frdcsa/attempts/10/simulation2.pl:377:
+	Singleton variables: [Person]
+Warning: /var/lib/myfrdcsa/codebases/minor/strads-frdcsa/attempts/10/simulation2.pl:381:
+	Singleton variables: [Person]
+Warning: /var/lib/myfrdcsa/codebases/minor/strads-frdcsa/attempts/10/simulation2.pl:400:
+	Singleton variables: [Person]
+</x-color><x-color><param>green</param>info: Initializing simulation...</x-color>
+<x-color><param>green</param>info: World state initialized:</x-color>
+    info: [time-0,location-home,day_of_week-monday,season-spring,economic_condition-stable]
+<x-color><param>green</param>info: Initial events:</x-color>
+    info: [do(jack,invite_to_party(jack,jill)),do(emma,start_new_job(emma,tech_company)),do(weather,cause_rainy_day),do(alex,study_for_exam(alex,math)),do(sophia,exercise(sophia))]
+<x-color><param>green</param>info: Starting new cycle</x-color>
+<x-color><param>green</param>info: Current event:</x-color>
+            info: do(jack,invite_to_party(jack,jill))
+            info: Processing event:
+            info: do(jack,invite_to_party(jack,jill))
+            info: Updating world state...
+            info: World state change:
+            info: location:home->party
+            info: Event outcome:
+            info: jack-invite_to_party(jack,jill)-change(location,party)
+            debug: Current world state:
+            debug: [time-0,day_of_week-monday,season-spring,economic_condition-stable,location-party]
+            debug: Actor perception:
+            debug: jack-do(jack,invite_to_party(jack,jill))
+            info: Updating beliefs...
+            info: New events generated:
+            info: [do(jill,decide_on_invitation(jack)),do(jill,decide_on_invitation(jack)),do(jill,decide_on_invitation(jack))]
+            info: Updated event queue:
+            info: [do(jill,decide_on_invitation(jack)),do(jill,decide_on_invitation(jack)),do(jill,decide_on_invitation(jack))]
+    info: Time incremented:
+        info: time:0->1
+<x-color><param>green</param>info: Cycle Summary:</x-color>
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,location-party,time-1]
+            info: Actor Beliefs:
+            info: []
+  info: Starting new cycle
+  info: Current event:
+            info: do(emma,start_new_job(emma,tech_company))
+            info: Processing event:
+            info: do(emma,start_new_job(emma,tech_company))
+            info: Updating world state...
+            info: New world state attribute:
+            info: employment_status:employed(tech_company)
+            info: Event outcome:
+            info: emma-start_new_job(emma,tech_company)-change(employment_status,employed(tech_company))
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,location-party,time-1,employment_status-employed(tech_company)]
+            debug: Actor perception:
+            debug: emma-do(emma,start_new_job(emma,tech_company))
+            info: Updating beliefs...
+            info: New belief:
+            info: emma-focused
+            info: New events generated:
+            info: [do(emma,adjust_to_new_job(tech_company))]
+            info: Updated event queue:
+            info: [do(emma,adjust_to_new_job(tech_company))]
+    info: Time incremented:
+        info: time:1->2
+  info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,location-party,employment_status-employed(tech_company),time-2]
+            info: Actor Beliefs:
+            info: [emma-focused]
+    info: Starting new cycle
+    info: Current event:
+            info: do(weather,cause_rainy_day)
+            info: Processing event:
+            info: do(weather,cause_rainy_day)
+            info: Updating world state...
+            info: New world state attribute:
+            info: weather:rainy
+            info: Event outcome:
+            info: weather-cause_rainy_day-change(weather,rainy)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,location-party,employment_status-employed(tech_company),time-2,weather-rainy]
+            debug: Actor perception:
+            debug: weather-do(weather,cause_rainy_day)
+            info: Updating beliefs...
+            info: New belief:
+            info: weather-adaptable
+            info: New events generated:
+            info: [do(jack,react_to_rain),do(jill,react_to_rain),do(_9104,react_to_rain)]
+            info: Updated event queue:
+            info: [do(jack,react_to_rain),do(jill,react_to_rain),do(_9104,react_to_rain)]
+    info: Time incremented:
+        info: time:2->3
+    info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,location-party,employment_status-employed(tech_company),weather-rainy,time-3]
+            info: Actor Beliefs:
+            info: [emma-focused,weather-adaptable]
+      info: Starting new cycle
+      info: Current event:
+            info: do(alex,study_for_exam(alex,math))
+            info: Processing event:
+            info: do(alex,study_for_exam(alex,math))
+            info: Updating world state...
+            info: New world state attribute:
+            info: knowledge:increased(math)
+            info: Event outcome:
+            info: alex-study_for_exam(alex,math)-change(knowledge,increased(math))
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,location-party,employment_status-employed(tech_company),weather-rainy,time-3,knowledge-increased(math)]
+            debug: Actor perception:
+            debug: alex-do(alex,study_for_exam(alex,math))
+            info: Updating beliefs...
+            info: New belief:
+            info: alex-anxious
+            info: New belief:
+            info: alex-anxious
+            info: New belief:
+            info: alex-anxious
+            info: New events generated:
+            info: [do(alex,take_exam(math)),do(alex,take_exam(math)),do(alex,take_exam(math))]
+            info: Updated event queue:
+            info: [do(alex,take_exam(math)),do(alex,take_exam(math)),do(alex,take_exam(math))]
+    info: Time incremented:
+        info: time:3->4
+      info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,location-party,employment_status-employed(tech_company),weather-rainy,knowledge-increased(math),time-4]
+            info: Actor Beliefs:
+            info: [emma-focused,weather-adaptable,alex-anxious]
+        info: Starting new cycle
+        info: Current event:
+            info: do(sophia,exercise(sophia))
+            info: Processing event:
+            info: do(sophia,exercise(sophia))
+            info: Updating world state...
+            info: New world state attribute:
+            info: fitness_level:improved
+            info: Event outcome:
+            info: sophia-exercise(sophia)-change(fitness_level,improved)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,location-party,employment_status-employed(tech_company),weather-rainy,knowledge-increased(math),time-4,fitness_level-improved]
+            debug: Actor perception:
+            debug: sophia-do(sophia,exercise(sophia))
+            info: Updating beliefs...
+            info: New belief:
+            info: sophia-motivated
+            info: New belief:
+            info: sophia-motivated
+            info: New events generated:
+            info: [do(sophia,feel_tired),do(sophia,feel_energized),do(sophia,feel_energized)]
+            info: Updated event queue:
+            info: [do(sophia,feel_tired),do(sophia,feel_energized),do(sophia,feel_energized)]
+    info: Time incremented:
+        info: time:4->5
+        info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,location-party,employment_status-employed(tech_company),weather-rainy,knowledge-increased(math),fitness_level-improved,time-5]
+            info: Actor Beliefs:
+            info: [emma-focused,weather-adaptable,alex-anxious,sophia-motivated]
+          info: Generated random event:
+            info: do(weather,react_to_rain)
+          info: Starting new cycle
+          info: Current event:
+            info: do(weather,react_to_rain)
+            info: Processing event:
+            info: do(weather,react_to_rain)
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: weather-react_to_rain
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,location-party,employment_status-employed(tech_company),weather-rainy,knowledge-increased(math),fitness_level-improved,time-5]
+            debug: Actor perception:
+            debug: weather-do(weather,react_to_rain)
+            info: Updating beliefs...
+            info: New belief:
+            info: weather-prepared
+            info: New belief:
+            info: weather-adaptable
+            info: New events generated:
+            info: [do(emma,react_to_rain),do(weather,go_out_with_umbrella),do(_708,react_to_rain)]
+            info: Updated event queue:
+            info: [do(emma,react_to_rain),do(weather,go_out_with_umbrella),do(_708,react_to_rain)]
+    info: Time incremented:
+        info: time:5->6
+          info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,location-party,employment_status-employed(tech_company),weather-rainy,knowledge-increased(math),fitness_level-improved,time-6]
+            info: Actor Beliefs:
+            info: [emma-focused,alex-anxious,sophia-motivated,weather-adaptable]
+            info: Generated random event:
+            info: do(emma,await_results(_1674))
+            info: Starting new cycle
+            info: Current event:
+            info: do(emma,await_results(_1810))
+            info: Processing event:
+            info: do(emma,await_results(_1810))
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: emma-await_results(_1810)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,location-party,employment_status-employed(tech_company),weather-rainy,knowledge-increased(math),fitness_level-improved,time-6]
+            debug: Actor perception:
+            debug: emma-do(emma,await_results(_1810))
+            info: Updating beliefs...
+            info: New belief:
+            info: emma-focused
+            info: New events generated:
+            info: [do(emma,adjust_to_new_job(tech_company))]
+            info: Updated event queue:
+            info: [do(emma,adjust_to_new_job(tech_company))]
+    info: Time incremented:
+        info: time:6->7
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,location-party,employment_status-employed(tech_company),weather-rainy,knowledge-increased(math),fitness_level-improved,time-7]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,weather-adaptable,emma-focused]
+            info: Generated random event:
+            info: do(jack,take_exam(_3444))
+            info: Starting new cycle
+            info: Current event:
+            info: do(jack,take_exam(_3784))
+            info: Processing event:
+            info: do(jack,take_exam(_3784))
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: jack-take_exam(_3784)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,location-party,employment_status-employed(tech_company),weather-rainy,knowledge-increased(math),fitness_level-improved,time-7]
+            debug: Actor perception:
+            debug: jack-do(jack,take_exam(_3784))
+            info: Updating beliefs...
+            info: New belief:
+            info: jack-nervous
+            info: New belief:
+            info: jack-nervous
+            info: New events generated:
+            info: [do(jill,decide_on_invitation(jack)),do(jack,await_results(_4766)),do(jack,await_results(_4750))]
+            info: Updated event queue:
+            info: [do(jill,decide_on_invitation(jack)),do(jack,await_results(_4766)),do(jack,await_results(_4750))]
+    info: Time incremented:
+        info: time:7->8
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,location-party,employment_status-employed(tech_company),weather-rainy,knowledge-increased(math),fitness_level-improved,time-8]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,weather-adaptable,emma-focused,jack-nervous]
+            info: Generated random event:
+            info: do(weather,cause_rainy_day)
+            info: Starting new cycle
+            info: Current event:
+            info: do(weather,cause_rainy_day)
+            info: Processing event:
+            info: do(weather,cause_rainy_day)
+            info: Updating world state...
+            info: World state change:
+            info: weather:rainy->rainy
+            info: Event outcome:
+            info: weather-cause_rainy_day-change(weather,rainy)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,location-party,employment_status-employed(tech_company),knowledge-increased(math),fitness_level-improved,time-8,weather-rainy]
+            debug: Actor perception:
+            debug: weather-do(weather,cause_rainy_day)
+            info: Updating beliefs...
+            info: New belief:
+            info: weather-adaptable
+            info: New belief:
+            info: weather-cozy
+            info: New events generated:
+            info: [do(_6922,react_to_rain),do(weather,stay_indoors),do(emma,react_to_rain)]
+            info: Updated event queue:
+            info: [do(_6922,react_to_rain),do(weather,stay_indoors),do(emma,react_to_rain)]
+    info: Time incremented:
+        info: time:8->9
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,location-party,employment_status-employed(tech_company),knowledge-increased(math),fitness_level-improved,weather-rainy,time-9]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,emma-focused,jack-nervous,weather-cozy]
+            info: Generated random event:
+            info: do(everyone,invite_to_party(_7802,_7804))
+            info: Starting new cycle
+            info: Current event:
+            info: do(everyone,invite_to_party(_8012,_8014))
+            info: Processing event:
+            info: do(everyone,invite_to_party(_8012,_8014))
+            info: Updating world state...
+            info: World state change:
+            info: location:party->party
+            info: Event outcome:
+            info: everyone-invite_to_party(_8012,_8014)-change(location,party)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),fitness_level-improved,weather-rainy,time-9,location-party]
+            debug: Actor perception:
+            debug: everyone-do(everyone,invite_to_party(_8012,_8014))
+            info: Updating beliefs...
+            info: New events generated:
+            info: [do(_9020,decide_on_invitation(_9026))]
+            info: Updated event queue:
+            info: [do(_9020,decide_on_invitation(_9026))]
+    info: Time incremented:
+        info: time:9->10
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),fitness_level-improved,weather-rainy,location-party,time-10]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,emma-focused,jack-nervous,weather-cozy]
+            info: Generated random event:
+            info: do(_9596,react_to_rain)
+            info: Starting new cycle
+            info: Current event:
+            info: do(_10114,react_to_rain)
+            info: Processing event:
+            info: do(_10114,react_to_rain)
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: _10114-react_to_rain
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),fitness_level-improved,weather-rainy,location-party,time-10]
+            debug: Actor perception:
+            debug: _10604-do(_10964,react_to_rain)
+            info: Updating beliefs...
+            info: New belief:
+            info: emma-focused
+            info: New belief:
+            info: emma-adaptable
+            info: New events generated:
+            info: [do(emma,adjust_to_new_job(tech_company)),do(jack,react_to_rain),do(emma,react_to_rain)]
+            info: Updated event queue:
+            info: [do(emma,adjust_to_new_job(tech_company)),do(jack,react_to_rain),do(emma,react_to_rain)]
+    info: Time incremented:
+        info: time:10->11
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),fitness_level-improved,weather-rainy,location-party,time-11]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,jack-nervous,weather-cozy,emma-adaptable]
+            info: Generated random event:
+            info: do(jill,study_for_exam(_11866))
+            info: Starting new cycle
+            info: Current event:
+            info: do(jill,study_for_exam(_12174))
+            info: Processing event:
+            info: do(jill,study_for_exam(_12174))
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: jill-study_for_exam(_12174)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),fitness_level-improved,weather-rainy,location-party,time-11]
+            debug: Actor perception:
+            debug: jill-do(jill,study_for_exam(_12174))
+            info: Updating beliefs...
+            info: New belief:
+            info: jill-prepared
+            info: New belief:
+            info: jill-prepared
+            info: New events generated:
+            info: [do(jill,go_out_with_umbrella),do(_13122,go_out_with_umbrella),do(emma,stay_indoors)]
+            info: Updated event queue:
+            info: [do(jill,go_out_with_umbrella),do(_13122,go_out_with_umbrella),do(emma,stay_indoors)]
+    info: Time incremented:
+        info: time:11->12
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),fitness_level-improved,weather-rainy,location-party,time-12]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,jack-nervous,weather-cozy,emma-adaptable,jill-prepared]
+            info: Generated random event:
+            info: do(jack,seek_comfort(_13970))
+            info: Starting new cycle
+            info: Current event:
+            info: do(jack,seek_comfort(_14236))
+            info: Processing event:
+            info: do(jack,seek_comfort(_14236))
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: jack-seek_comfort(_14236)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),fitness_level-improved,weather-rainy,location-party,time-12]
+            debug: Actor perception:
+            debug: jack-do(jack,seek_comfort(_14236))
+            info: Updating beliefs...
+            info: New belief:
+            info: jack-prepared
+            info: New events generated:
+            info: [do(everyone,go_out_with_umbrella),do(jack,go_out_with_umbrella),do(jill,decide_on_invitation(jack))]
+            info: Updated event queue:
+            info: [do(everyone,go_out_with_umbrella),do(jack,go_out_with_umbrella),do(jill,decide_on_invitation(jack))]
+    info: Time incremented:
+        info: time:12->13
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),fitness_level-improved,weather-rainy,location-party,time-13]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,weather-cozy,emma-adaptable,jill-prepared,jack-prepared]
+            info: Generated random event:
+            info: do(_1322,exercise(_1664))
+            info: Starting new cycle
+            info: Current event:
+            info: do(_1840,exercise(_1846))
+            info: Processing event:
+            info: do(_1840,exercise(_1846))
+            info: Updating world state...
+            info: World state change:
+            info: fitness_level:improved->improved
+            info: Event outcome:
+            info: _1840-exercise(_1846)-change(fitness_level,improved)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),weather-rainy,location-party,time-13,fitness_level-improved]
+            debug: Actor perception:
+            debug: _2412-do(_2784,exercise(_2790))
+            info: Updating beliefs...
+            info: New belief:
+            info: jack-adaptable
+            info: New belief:
+            info: jack-adaptable
+            info: New events generated:
+            info: [do(jack,react_to_rain),do(_2892,react_to_rain),do(jill,decide_on_invitation(jack))]
+            info: Updated event queue:
+            info: [do(jack,react_to_rain),do(_2892,react_to_rain),do(jill,decide_on_invitation(jack))]
+    info: Time incremented:
+        info: time:13->14
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,time-14]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,weather-cozy,emma-adaptable,jill-prepared,jack-adaptable]
+            info: Generated random event:
+            info: do(jack,receive_bad_grade)
+            info: Starting new cycle
+            info: Current event:
+            info: do(jack,receive_bad_grade)
+            info: Processing event:
+            info: do(jack,receive_bad_grade)
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: jack-receive_bad_grade
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,time-14]
+            debug: Actor perception:
+            debug: jack-do(jack,receive_bad_grade)
+            info: Updating beliefs...
+            info: New belief:
+            info: jack-prepared
+            info: New events generated:
+            info: [do(emma,stay_indoors),do(jill,go_out_with_umbrella),do(jack,go_out_with_umbrella)]
+            info: Updated event queue:
+            info: [do(emma,stay_indoors),do(jill,go_out_with_umbrella),do(jack,go_out_with_umbrella)]
+    info: Time incremented:
+        info: time:14->15
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,time-15]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,weather-cozy,emma-adaptable,jill-prepared,jack-prepared]
+            info: Generated random event:
+            info: do(jill,take_exam(_5712))
+            info: Starting new cycle
+            info: Current event:
+            info: do(jill,take_exam(_6052))
+            info: Processing event:
+            info: do(jill,take_exam(_6052))
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: jill-take_exam(_6052)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,time-15]
+            debug: Actor perception:
+            debug: jill-do(jill,take_exam(_6052))
+            info: Updating beliefs...
+            info: New belief:
+            info: jill-prepared
+            info: New events generated:
+            info: [do(emma,stay_indoors),do(emma,go_out_with_umbrella),do(jill,go_out_with_umbrella)]
+            info: Updated event queue:
+            info: [do(emma,stay_indoors),do(emma,go_out_with_umbrella),do(jill,go_out_with_umbrella)]
+    info: Time incremented:
+        info: time:15->16
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,time-16]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,weather-cozy,emma-adaptable,jack-prepared,jill-prepared]
+            info: Generated random event:
+            info: do(everyone,exercise(_7920))
+            info: Starting new cycle
+            info: Current event:
+            info: do(everyone,exercise(_8102))
+            info: Processing event:
+            info: do(everyone,exercise(_8102))
+            info: Updating world state...
+            info: World state change:
+            info: fitness_level:improved->improved
+            info: Event outcome:
+            info: everyone-exercise(_8102)-change(fitness_level,improved)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),weather-rainy,location-party,time-16,fitness_level-improved]
+            debug: Actor perception:
+            debug: everyone-do(everyone,exercise(_8102))
+            info: Updating beliefs...
+            info: New belief:
+            info: everyone-prepared
+            info: New events generated:
+            info: [do(weather,decide_on_invitation(_9170)),do(jill,decide_on_invitation(_9154)),do(everyone,go_out_with_umbrella)]
+            info: Updated event queue:
+            info: [do(weather,decide_on_invitation(_9170)),do(jill,decide_on_invitation(_9154)),do(everyone,go_out_with_umbrella)]
+    info: Time incremented:
+        info: time:16->17
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,employment_status-employed(tech_company),knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,time-17]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,weather-cozy,emma-adaptable,jack-prepared,jill-prepared,everyone-prepared]
+            info: Generated random event:
+            info: do(jill,start_new_job(jill,_9986))
+            info: Starting new cycle
+            info: Current event:
+            info: do(jill,start_new_job(jill,_10284))
+            info: Processing event:
+            info: do(jill,start_new_job(jill,_10284))
+            info: Updating world state...
+            info: World state change:
+            info: employment_status:employed(tech_company)->employed(_10284)
+            info: Event outcome:
+            info: jill-start_new_job(jill,_10284)-change(employment_status,employed(_10284))
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,time-17,employment_status-employed(_10630)]
+            debug: Actor perception:
+            debug: jill-do(jill,start_new_job(jill,_10284))
+            info: Updating beliefs...
+            info: New belief:
+            info: jill-focused
+            info: New belief:
+            info: jill-prepared
+            info: New events generated:
+            info: [do(jill,adjust_to_new_job(_11340)),do(jack,go_out_with_umbrella),do(jill,go_out_with_umbrella)]
+            info: Updated event queue:
+            info: [do(jill,adjust_to_new_job(_11340)),do(jack,go_out_with_umbrella),do(jill,go_out_with_umbrella)]
+    info: Time incremented:
+        info: time:17->18
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,employment_status-employed(_11646),time-18]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,weather-cozy,emma-adaptable,jack-prepared,everyone-prepared,jill-prepared]
+            info: Generated random event:
+            info: do(jack,start_new_job(jack,_12156))
+            info: Starting new cycle
+            info: Current event:
+            info: do(jack,start_new_job(jack,_12454))
+            info: Processing event:
+            info: do(jack,start_new_job(jack,_12454))
+            info: Updating world state...
+            info: World state change:
+            info: employment_status:employed(_12630)->employed(_12454)
+            info: Event outcome:
+            info: jack-start_new_job(jack,_12454)-change(employment_status,employed(_12454))
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,time-18,employment_status-employed(_12800)]
+            debug: Actor perception:
+            debug: jack-do(jack,start_new_job(jack,_12454))
+            info: Updating beliefs...
+            info: New belief:
+            info: jack-prepared
+            info: New events generated:
+            info: [do(jill,stay_indoors),do(jill,decide_on_invitation(jack)),do(jack,go_out_with_umbrella)]
+            info: Updated event queue:
+            info: [do(jill,stay_indoors),do(jill,decide_on_invitation(jack)),do(jack,go_out_with_umbrella)]
+    info: Time incremented:
+        info: time:18->19
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,employment_status-employed(_13804),time-19]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,weather-cozy,emma-adaptable,everyone-prepared,jill-prepared,jack-prepared]
+            info: Generated random event:
+            info: do(everyone,start_new_job(_14324))
+            info: Starting new cycle
+            info: Current event:
+            info: do(everyone,start_new_job(_14610))
+            info: Processing event:
+            info: do(everyone,start_new_job(_14610))
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: everyone-start_new_job(_14610)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,employment_status-employed(_14882),time-19]
+            debug: Actor perception:
+            debug: everyone-do(everyone,start_new_job(_284))
+            info: Updating beliefs...
+            info: New belief:
+            info: everyone-prepared
+            info: New events generated:
+            info: [do(emma,stay_indoors),do(everyone,go_out_with_umbrella),do(jill,go_out_with_umbrella)]
+            info: Updated event queue:
+            info: [do(emma,stay_indoors),do(everyone,go_out_with_umbrella),do(jill,go_out_with_umbrella)]
+    info: Time incremented:
+        info: time:19->20
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,employment_status-employed(_1026),time-20]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,weather-cozy,emma-adaptable,jill-prepared,jack-prepared,everyone-prepared]
+            info: Generated random event:
+            info: do(weather,take_exam(_1510))
+            info: Starting new cycle
+            info: Current event:
+            info: do(weather,take_exam(_1850))
+            info: Processing event:
+            info: do(weather,take_exam(_1850))
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: weather-take_exam(_1850)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,employment_status-employed(_2122),time-20]
+            debug: Actor perception:
+            debug: weather-do(weather,take_exam(_1850))
+            info: Updating beliefs...
+            info: New belief:
+            info: weather-adaptable
+            info: New events generated:
+            info: [do(_2810,react_to_rain),do(jill,react_to_rain),do(jack,react_to_rain)]
+            info: Updated event queue:
+            info: [do(_2810,react_to_rain),do(jill,react_to_rain),do(jack,react_to_rain)]
+    info: Time incremented:
+        info: time:20->21
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,employment_status-employed(_3118),time-21]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,emma-adaptable,jill-prepared,jack-prepared,everyone-prepared,weather-adaptable]
+            info: Generated random event:
+            info: do(jack,start_new_job(_3638))
+            info: Starting new cycle
+            info: Current event:
+            info: do(jack,start_new_job(_3924))
+            info: Processing event:
+            info: do(jack,start_new_job(_3924))
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: jack-start_new_job(_3924)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,employment_status-employed(_4196),time-21]
+            debug: Actor perception:
+            debug: jack-do(jack,start_new_job(_3924))
+            info: Updating beliefs...
+            info: New belief:
+            info: jack-focused
+            info: New belief:
+            info: jack-prepared
+            info: New events generated:
+            info: [do(jack,adjust_to_new_job(_4894)),do(emma,stay_indoors),do(jack,go_out_with_umbrella)]
+            info: Updated event queue:
+            info: [do(jack,adjust_to_new_job(_4894)),do(emma,stay_indoors),do(jack,go_out_with_umbrella)]
+    info: Time incremented:
+        info: time:21->22
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,employment_status-employed(_5200),time-22]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,emma-adaptable,jill-prepared,everyone-prepared,weather-adaptable,jack-prepared]
+            info: Generated random event:
+            info: do(emma,await_results(_5886))
+            info: Starting new cycle
+            info: Current event:
+            info: do(emma,await_results(_6006))
+            info: Processing event:
+            info: do(emma,await_results(_6006))
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: emma-await_results(_6006)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,employment_status-employed(_6278),time-22]
+            debug: Actor perception:
+            debug: emma-do(emma,await_results(_6006))
+            info: Updating beliefs...
+            info: New belief:
+            info: emma-focused
+            info: New belief:
+            info: emma-cozy
+            info: New events generated:
+            info: [do(emma,adjust_to_new_job(tech_company)),do(weather,go_out_with_umbrella),do(emma,stay_indoors)]
+            info: Updated event queue:
+            info: [do(emma,adjust_to_new_job(tech_company)),do(weather,go_out_with_umbrella),do(emma,stay_indoors)]
+    info: Time incremented:
+        info: time:22->23
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,knowledge-increased(math),weather-rainy,location-party,fitness_level-improved,employment_status-employed(_7270),time-23]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,jill-prepared,everyone-prepared,weather-adaptable,jack-prepared,emma-cozy]
+            info: Generated random event:
+            info: do(jack,study_for_exam(_7714,_7716))
+            info: Starting new cycle
+            info: Current event:
+            info: do(jack,study_for_exam(_8076,_8078))
+            info: Processing event:
+            info: do(jack,study_for_exam(_8076,_8078))
+            info: Updating world state...
+            info: World state change:
+            info: knowledge:increased(math)->increased(_8078)
+            info: Event outcome:
+            info: jack-study_for_exam(_8076,_8078)-change(knowledge,increased(_8078))
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,weather-rainy,location-party,fitness_level-improved,employment_status-employed(_8452),time-23,knowledge-increased(_8424)]
+            debug: Actor perception:
+            debug: jack-do(jack,study_for_exam(_8076,_8078))
+            info: Updating beliefs...
+            info: New belief:
+            info: jack-focused
+            info: New belief:
+            info: jack-prepared
+            info: New events generated:
+            info: [do(emma,stay_indoors),do(jack,adjust_to_new_job(_9122)),do(jack,go_out_with_umbrella)]
+            info: Updated event queue:
+            info: [do(emma,stay_indoors),do(jack,adjust_to_new_job(_9122)),do(jack,go_out_with_umbrella)]
+    info: Time incremented:
+        info: time:23->24
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,weather-rainy,location-party,fitness_level-improved,employment_status-employed(_9456),knowledge-increased(_9440),time-24]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,jill-prepared,everyone-prepared,weather-adaptable,emma-cozy,jack-prepared]
+            info: Generated random event:
+            info: do(everyone,await_results)
+            info: Starting new cycle
+            info: Current event:
+            info: do(everyone,await_results)
+            info: Processing event:
+            info: do(everyone,await_results)
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: everyone-await_results
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,weather-rainy,location-party,fitness_level-improved,employment_status-employed(_10530),knowledge-increased(_10514),time-24]
+            debug: Actor perception:
+            debug: everyone-do(everyone,await_results)
+            info: Updating beliefs...
+            info: New belief:
+            info: everyone-prepared
+            info: New events generated:
+            info: [do(jack,decide_on_invitation(_11244)),do(_11226,go_out_with_umbrella),do(weather,decide_on_invitation(_11216))]
+            info: Updated event queue:
+            info: [do(jack,decide_on_invitation(_11244)),do(_11226,go_out_with_umbrella),do(weather,decide_on_invitation(_11216))]
+    info: Time incremented:
+        info: time:24->25
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,weather-rainy,location-party,fitness_level-improved,employment_status-employed(_11566),knowledge-increased(_11550),time-25]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,jill-prepared,weather-adaptable,emma-cozy,jack-prepared,everyone-prepared]
+            info: Generated random event:
+            info: do(_11850,seek_comfort(_12108))
+            info: Starting new cycle
+            info: Current event:
+            info: do(_12368,seek_comfort(_12374))
+            info: Processing event:
+            info: do(_12368,seek_comfort(_12374))
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: _12368-seek_comfort(_12374)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,weather-rainy,location-party,fitness_level-improved,employment_status-employed(_12662),knowledge-increased(_12646),time-25]
+            debug: Actor perception:
+            debug: _12862-do(_13234,seek_comfort(_13240))
+            info: Updating beliefs...
+            info: New belief:
+            info: jill-focused
+            info: New belief:
+            info: jill-adaptable
+            info: New events generated:
+            info: [do(jill,adjust_to_new_job(_766)),do(_748,react_to_rain),do(everyone,react_to_rain)]
+            info: Updated event queue:
+            info: [do(jill,adjust_to_new_job(_766)),do(_748,react_to_rain),do(everyone,react_to_rain)]
+    info: Time incremented:
+        info: time:25->26
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,weather-rainy,location-party,fitness_level-improved,employment_status-employed(_1088),knowledge-increased(_1072),time-26]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,weather-adaptable,emma-cozy,jack-prepared,everyone-prepared,jill-adaptable]
+            info: Generated random event:
+            info: do(jack,invite_to_party(_1798,_1800))
+            info: Starting new cycle
+            info: Current event:
+            info: do(jack,invite_to_party(_1878,_1880))
+            info: Processing event:
+            info: do(jack,invite_to_party(_1878,_1880))
+            info: Updating world state...
+            info: World state change:
+            info: location:party->party
+            info: Event outcome:
+            info: jack-invite_to_party(_1878,_1880)-change(location,party)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,weather-rainy,fitness_level-improved,employment_status-employed(_2258),knowledge-increased(_2242),time-26,location-party]
+            debug: Actor perception:
+            debug: jack-do(jack,invite_to_party(_1878,_1880))
+            info: Updating beliefs...
+            info: New belief:
+            info: jack-cozy
+            info: New events generated:
+            info: [do(jack,decide_on_invitation(_2936)),do(jill,decide_on_invitation(jack)),do(jack,stay_indoors)]
+            info: Updated event queue:
+            info: [do(jack,decide_on_invitation(_2936)),do(jill,decide_on_invitation(jack)),do(jack,stay_indoors)]
+    info: Time incremented:
+        info: time:26->27
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,weather-rainy,fitness_level-improved,employment_status-employed(_3270),knowledge-increased(_3254),location-party,time-27]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,weather-adaptable,emma-cozy,everyone-prepared,jill-adaptable,jack-cozy]
+            info: Generated random event:
+            info: do(jill,react_to_rain)
+            info: Starting new cycle
+            info: Current event:
+            info: do(jill,react_to_rain)
+            info: Processing event:
+            info: do(jill,react_to_rain)
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: jill-react_to_rain
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,weather-rainy,fitness_level-improved,employment_status-employed(_4344),knowledge-increased(_4328),location-party,time-27]
+            debug: Actor perception:
+            debug: jill-do(jill,react_to_rain)
+            info: Updating beliefs...
+            info: New belief:
+            info: jill-focused
+            info: New belief:
+            info: jill-prepared
+            info: New events generated:
+            info: [do(jill,adjust_to_new_job(_5014)),do(emma,stay_indoors),do(jill,go_out_with_umbrella)]
+            info: Updated event queue:
+            info: [do(jill,adjust_to_new_job(_5014)),do(emma,stay_indoors),do(jill,go_out_with_umbrella)]
+    info: Time incremented:
+        info: time:27->28
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,weather-rainy,fitness_level-improved,employment_status-employed(_5348),knowledge-increased(_5332),location-party,time-28]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,weather-adaptable,emma-cozy,everyone-prepared,jack-cozy,jill-prepared]
+            info: Generated random event:
+            info: do(jill,accept_invitation(_6036))
+            info: Starting new cycle
+            info: Current event:
+            info: do(jill,accept_invitation(_6126))
+            info: Processing event:
+            info: do(jill,accept_invitation(_6126))
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: jill-accept_invitation(_6126)
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,weather-rainy,fitness_level-improved,employment_status-employed(_6426),knowledge-increased(_6410),location-party,time-28]
+            debug: Actor perception:
+            debug: jill-do(jill,accept_invitation(_6126))
+            info: Updating beliefs...
+            info: New belief:
+            info: jill-focused
+            info: New belief:
+            info: jill-focused
+            info: New events generated:
+            info: [do(jill,adjust_to_new_job(_7116)),do(jill,adjust_to_new_job(_7100)),do(jack,stay_indoors)]
+            info: Updated event queue:
+            info: [do(jill,adjust_to_new_job(_7116)),do(jill,adjust_to_new_job(_7100)),do(jack,stay_indoors)]
+    info: Time incremented:
+        info: time:28->29
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,weather-rainy,fitness_level-improved,employment_status-employed(_7450),knowledge-increased(_7434),location-party,time-29]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,weather-adaptable,emma-cozy,everyone-prepared,jack-cozy,jill-focused]
+            info: Generated random event:
+            info: do(weather,react_to_rain)
+            info: Starting new cycle
+            info: Current event:
+            info: do(weather,react_to_rain)
+            info: Processing event:
+            info: do(weather,react_to_rain)
+            info: Updating world state...
+            warning: No specific outcome for:
+            warning: weather-react_to_rain
+            debug: Current world state:
+            debug: [day_of_week-monday,season-spring,economic_condition-stable,weather-rainy,fitness_level-improved,employment_status-employed(_8542),knowledge-increased(_8526),location-party,time-29]
+            debug: Actor perception:
+            debug: weather-do(weather,react_to_rain)
+            info: Updating beliefs...
+            info: New belief:
+            info: weather-adaptable
+            info: New belief:
+            info: weather-adaptable
+            info: New events generated:
+            info: [do(_9214,react_to_rain),do(emma,react_to_rain),do(_9190,react_to_rain)]
+            info: Updated event queue:
+            info: [do(_9214,react_to_rain),do(emma,react_to_rain),do(_9190,react_to_rain)]
+    info: Time incremented:
+        info: time:29->30
+            info: Cycle Summary:
+            info: World State:
+            info: [day_of_week-monday,season-spring,economic_condition-stable,weather-rainy,fitness_level-improved,employment_status-employed(_9550),knowledge-increased(_9534),location-party,time-30]
+            info: Actor Beliefs:
+            info: [alex-anxious,sophia-motivated,emma-cozy,everyone-prepared,jack-cozy,jill-focused,weather-adaptable]
+<x-color><param>green</param>info: Simulation ended.</x-color>
+
+
+
+The Annals of Our Simulation:
+
+
+Day 1: jack invited jill to a party
+Day 2: emma started a new job at tech_company
+Day 3: weather caused a rainy day
+Day 4: alex performed the action: study_for_exam(alex,math)
+Day 5: sophia exercised
+Day 6: weather reacted to the rain
+Day 7: emma performed the action: await_results(_10390)
+Day 8: jack took the unknown-thing exam
+Day 9: weather caused a rainy day
+Day 10: everyone invited unknown-thing to a party
+Day 11: unknown-thing reacted to the rain
+Day 12: jill studied for the unknown-thing exam
+Day 13: jack performed the action: seek_comfort(_10264)
+Day 14: unknown-thing exercised
+Day 15: jack performed the action: receive_bad_grade
+Day 16: jill took the unknown-thing exam
+Day 17: everyone exercised
+Day 18: jill started a new job at unknown-thing
+Day 19: jack started a new job at unknown-thing
+Day 20: everyone performed the action: start_new_job(_10110)
+Day 21: weather took the unknown-thing exam
+Day 22: jack performed the action: start_new_job(_10066)
+Day 23: emma performed the action: await_results(_10044)
+Day 24: jack performed the action: study_for_exam(_10020,_10022)
+Day 25: everyone performed the action: await_results
+Day 26: unknown-thing performed the action: seek_comfort(_9980)
+Day 27: jack invited unknown-thing to a party
+Day 28: jill reacted to the rain
+Day 29: jill accepted unknown-thing's invitation
+Day 30: weather reacted to the rain
+<x-color><param>green3</param>andrewdo@ai2</x-color><x-color><param>blue2</param>:/var/lib/myfrdcsa/codebases/minor/strads-frdcsa/attempts/10$</x-color> 
