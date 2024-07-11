@@ -24,7 +24,7 @@ STRADS-CLAUDE is an advanced simulation system inspired by Douglas Lenat's STRAD
 
 1. Clone the repository:
 
-`git clone https://github.com/yourusername/strads-claude.git`
+`git clone https://github.com/aindilis/strads-claude.git`
 
 2. Navigate to the project directory:
 
@@ -67,4 +67,4 @@ This project is licensed under the GPLv3  License - see the [LICENSE.md](LICENSE
 ### Acknowledgments
 
 - Inspired by Douglas Lenat's original STRADS concept
-- Developed with the assistance of Anthropic's Claude 3.5 Sonnet LLM
+- Developed with major assistance from Anthropic's Claude 3.5 Sonnet LLM
