@@ -2,7 +2,7 @@
 
 ## Simulation of Temporally Recursive Agents with Dynamic Scenarios - Collaborative Learning and Understanding through Dynamic Environments
 
-STRADS-CLAUDE is an advanced simulation system inspired by Douglas Lenat's STRADS (Simulation of Temporally Recursive Agents in Dynamic Scenarios). This project aims to create a flexible, knowledge-based simulation of possible futures, allowing for the exploration of complex scenarios and agent interactions.
+STRADS-CLAUDE is an advanced simulation system inspired by Douglas Lenat's STRADS (STRategic Automatic Discovery System). This project aims to create a flexible, knowledge-based simulation of possible futures, allowing for the exploration of complex scenarios and agent interactions.
 
 ### Features
 
